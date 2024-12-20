@@ -1,0 +1,91 @@
+<html id="gene">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+    <title>Generate QR Code</title>
+    <script src="https://unpkg.com/qr-code-styling/lib/qr-code-styling.js"></script>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="custom-root">
+      <div class="custom-flex-container">
+        <div class="custom-flex-center">
+          <div class="custom-main-content">
+            <h3 class="custom-title">Create a QR code</h3>
+            <p class="custom-description">
+              Enter the URL you want to create a QR code for. You can customize the colors and add style, and then download or share it.
+            </p>
+            <div class="custom-input-group">
+              <label class="custom-label">
+                <p style="color: white;">URL</p>
+                <input class="custom-input" value="" id="link" placeholder="Enter your Link"/>
+              </label>
+            </div>
+            <h3 class="custom-title">Color Selection</h3>
+            <div class="custom-colors">
+              <div class="dots-color" id="black"><p>Black</p></div>
+              <div class="dots-color" id="white"><p>White</p></div>
+              <div class="dots-color" id="gray"><p>Gray</p></div>
+              <div class="dots-color" id="red"><p>Red</p></div>
+              <div class="dots-color" id="blue"><p>Blue</p></div>
+              <div class="dots-color" id="green"><p>Green</p></div>
+              <div class="dots-color" id="c-random"><p>Random</p></div>
+            </div>
+            <h3 class="custom-title">Background Color</h3>
+            <div class="custom-bg">
+              <div class="bg-color" id="bg-black"><p>Black</p></div>
+              <div class="bg-color" id="bg-white"><p>White</p></div>
+              <div class="bg-color" id="bg-gray"><p>Gray</p></div>
+              <div class="bg-color" id="bg-red"><p>Red</p></div>
+              <div class="bg-color" id="bg-blue"><p>Blue</p></div>
+              <div class="bg-color" id="bg-green"><p>Green</p></div>
+              <div class="bg-color" id="bg-random"><p>Random</p></div>
+            </div>
+            <h3 class="custom-title">Dots Style</h3>
+            <div class="custom-dots">
+              <div class="dots-style" id="square"><p>Square</p></div>
+              <div class="dots-style" id="dots"><p>Dots</p></div>
+              <div class="dots-style" id="rounded"><p>Rounded</p></div>
+              <div class="dots-style" id="extra-rounded"><p>Extra Rounded</p></div>
+              <div class="dots-style" id="classy"><p>Classy</p></div>
+              <div class="dots-style" id="classy-rounded"><p>Classy Rounded</p></div>
+              <div class="dots-style" id="d-random"><p>Random</p></div>
+            </div>
+            <h3 class="custom-title">Corner Square Style</h3>
+            <div class="custom-square">
+              <div class="corner-square-style" id="c-square"><p>Square</p></div>
+              <div class="corner-square-style" id="c-dots"><p>Dots</p></div>
+              <div class="corner-square-style" id="c-rounded"><p>Rounded</p></div>
+              <div class="corner-square-style" id="cs-random"><p>Random</p></div>
+            </div>
+            <h3 class="custom-title">Corner Dot Style</h3>
+            <div class="custom-dot">
+              <div class="corner-dot-style" id="d-square"><p>Square</p></div>
+              <div class="corner-dot-style" id="d-dots"><p>Dots</p></div>
+              <div class="corner-dot-style" id="cd-random"><p>Random</p></div>
+            </div>
+            <div class="custom-button-group">
+              <div class="custom-buttons">
+                <a href="./index.html">
+                  <button class="custom-button custom-button-cancel">
+                    <span>Cancel</span>
+                  </button>
+                </a>
+                <button class="custom-button custom-button-generate" id="generate">
+                  <span>Generate QR code</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
