@@ -30,6 +30,7 @@ for(let box of cornerDot)
 {
     box.addEventListener("click", cornerDotSel);
 }
+gen.addEventListener("click", dotColorSel);
 function dotColorSel()
 {
   for (let box of dotBoxes) {
@@ -67,6 +68,7 @@ function dotColorSel()
   else
   {
     color = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
+    bgColorSel();
   }
   this.classList.add("selected");
   this.classList.remove("dots-color");
@@ -108,6 +110,7 @@ function bgColorSel()
   else
   {
     bgColor = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
+    dotStyleSel();
   }
   this.classList.add("selected");
   this.classList.remove("bg-color");
@@ -152,6 +155,7 @@ function dotStyleSel()
   {
     let styles = ["square", "dots", "rounded", "extra-rounded", "classy", "classy-rounded"];
     dotStyle = styles[Math.floor(Math.random() * styles.length)];
+    cornerSquareSel();
   }
   this.classList.add("selected");
   this.classList.remove("dots-style");
@@ -184,6 +188,7 @@ function cornerSquareSel()
   {
     let styles = ["square", "dots", "rounded"];
     cornerSquareStyle = styles[Math.floor(Math.random() * styles.length)];
+    cornerDotSel();
   }
   this.classList.remove("corner-square-style");
   this.classList.add("selected");
@@ -250,7 +255,47 @@ gen.addEventListener("click", () => {
   });
   
     const genPage = document.querySelector("#gene");
-    genPage.innerHTML = `<head><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" /><link rel="stylesheet" href="style.css"/><title>Export QR Code</title><link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," /><script src="https://unpkg.com/qr-code-styling/lib/qr-code-styling.js"></script></head><body><div class="new-wrapper"><div class="new-main-container"><div class="new-header"><div class="new-content-wrapper"><h3 class="new-heading">QR code generated</h3><p class="new-description">Your custom QR code is ready. Download it using the button below.</p><div class="new-grid"><div class="new-image-wrapper"><div class="new-image" id="canvas"></div></div></div><div class="new-button-wrapper"><button class="new-button" id="download-QR"><span class="new-button-text">Download QR code</span></button></div><div class="new-back-wrapper"><a href="./index.html" class="new-back-link"><button class="new-back-button"><span class="new-back-button-text">Back to dashboard</span></button></a></div></div></div></div></div></body>`;
+    genPage.innerHTML = `<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Export QR Code</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <script src="https://unpkg.com/qr-code-styling/lib/qr-code-styling.js"></script>
+  </head>
+  
+  <body>
+    <div class="new-wrapper">
+      <div class="new-main-container">
+        <div class="new-header">
+          <div class="new-content-wrapper">
+            <h3 class="new-heading">QR code generated</h3>
+            <p class="new-description">
+              Your custom QR code is ready. Download it using the button below.
+            </p>
+            <div class="new-grid">
+              <div class="new-image-wrapper">
+                <div class="new-image" id="canvas"></div>
+              </div>
+            </div>
+            <div class="new-button-wrapper">
+              <button class="new-button" id="download-QR">
+                <span class="new-button-text">Download QR code</span>
+              </button>
+            </div>
+            <div class="new-back-wrapper">
+              <a href="./index.html" class="new-back-link">
+                <button class="new-back-button">
+                  <span class="new-back-button-text">Back to dashboard</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  `;
     const qrDiv = document.querySelector("#canvas");
     if (qrDiv) 
     {
