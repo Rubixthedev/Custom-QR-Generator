@@ -419,7 +419,19 @@ body
   min-width: 40px;
   flex: 1;
 }
-
+.selected
+{
+  color: #fff;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #1980e6;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 0.75rem;
+  }
 .custom-input 
 {
   width: 100%;

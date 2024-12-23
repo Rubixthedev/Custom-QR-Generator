@@ -30,7 +30,6 @@ for(let box of cornerDot)
 {
     box.addEventListener("click", cornerDotSel);
 }
-gen.addEventListener("click", dotColorSel);
 function dotColorSel()
 {
   for (let box of dotBoxes) {
@@ -167,11 +166,11 @@ function cornerSquareSel()
     box.classList.remove("selected");
     box.classList.add("corner-square-style");
   }
-  if (this.id === "d-square") 
+  if (this.id === "c-square") 
   {
     cornerSquareStyle = "square";
   }
-  else if (this.id === "d-dots")
+  else if (this.id === "c-dots")
   {
     cornerSquareStyle = "dot";
   }
@@ -179,7 +178,7 @@ function cornerSquareSel()
   {
     cornerSquareStyle = "extra-rounded";
   }
-  else if (this.id === "cd-random")
+  else if (this.id === "cs-random")
   {
     let styles = ["square", "dots", "rounded"];
     cornerSquareStyle = styles[Math.floor(Math.random() * styles.length)];
@@ -200,16 +199,16 @@ function cornerDotSel()
     box.classList.remove("selected");
     box.classList.add("corner-dot-style");
   }
-  if (this.id === "c-square") 
+  if (this.id === "d-square") 
   {
     cornerDotStyle = "square";
   }
-  else if (this.id === "c-dots")
+  else if (this.id === "d-dots")
   {
     cornerDotStyle = "dot";
   }
   
-  else if (this.id === "cs-random")
+  else if (this.id === "cd-random")
   {
     let styles = ["square", "dots"];
     cornerDotStyle = styles[Math.floor(Math.random() * styles.length)];
