@@ -64,11 +64,6 @@ function dotColorSel()
   {
     color = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
   }
-  else
-  {
-    color = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
-    bgColorSel();
-  }
   this.classList.add("selected");
   this.classList.remove("dots-color");
 }
@@ -105,11 +100,6 @@ function bgColorSel()
   else if(this.id=="bg-random")
   {
     bgColor = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
-  }
-  else
-  {
-    bgColor = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
-    dotStyleSel();
   }
   this.classList.add("selected");
   this.classList.remove("bg-color");
@@ -150,12 +140,6 @@ function dotStyleSel()
     let styles = ["square", "dots", "rounded", "extra-rounded", "classy", "classy-rounded"];
     dotStyle = styles[Math.floor(Math.random() * styles.length)];
   }
-  else
-  {
-    let styles = ["square", "dots", "rounded", "extra-rounded", "classy", "classy-rounded"];
-    dotStyle = styles[Math.floor(Math.random() * styles.length)];
-    cornerSquareSel();
-  }
   this.classList.add("selected");
   this.classList.remove("dots-style");
 }
@@ -183,12 +167,6 @@ function cornerSquareSel()
     let styles = ["square", "dots", "rounded"];
     cornerSquareStyle = styles[Math.floor(Math.random() * styles.length)];
   }
-  else
-  {
-    let styles = ["square", "dots", "rounded"];
-    cornerSquareStyle = styles[Math.floor(Math.random() * styles.length)];
-    cornerDotSel();
-  }
   this.classList.remove("corner-square-style");
   this.classList.add("selected");
 }
@@ -209,11 +187,6 @@ function cornerDotSel()
   }
   
   else if (this.id === "cd-random")
-  {
-    let styles = ["square", "dots"];
-    cornerDotStyle = styles[Math.floor(Math.random() * styles.length)];
-  }
-  else
   {
     let styles = ["square", "dots"];
     cornerDotStyle = styles[Math.floor(Math.random() * styles.length)];
